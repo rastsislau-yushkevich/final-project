@@ -8,9 +8,15 @@ $('.about-slider').slick({
     slidesToScroll: 1,
     arrows: true
 });
+$('.testimonials-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true
+});
 
 function burger() {
-    var x = document.getElementById("myLinks");
+    let x = document.querySelector(".myLinks");
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {
