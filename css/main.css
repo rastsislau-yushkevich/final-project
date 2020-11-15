@@ -646,6 +646,7 @@ template {
 
 body {
   overflow-x: hidden;
+  width: 100%;
   font-family: "Segoe-UI-Light";
   font-weight: 300;
 }
@@ -666,6 +667,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* Style the navigation menu */
   /* Hide the links inside the navigation menu (except for logo/home) */
   /* Style navigation menu links */
   /* Style the hamburger menu */
@@ -674,40 +676,46 @@ header {
 }
 header img {
   height: 45px;
-  margin-left: 9px;
-  margin-top: 19px;
   width: 114px;
 }
 header .topnav {
-  height: 113px;
   overflow: hidden;
   background-color: #fff;
   position: relative;
+  width: 100%;
 }
 header .topnav .myLinks {
   display: none;
 }
 header .topnav a {
   color: #000;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
   display: block;
 }
-header .topnav span {
-  font-family: "Montserrat-Bold", sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  color: #c4c4c4;
-  margin-right: 37px;
-}
 header .topnav a.icon {
-  background: #fff;
-  color: black;
+  background-color: #fff;
   display: block;
   position: absolute;
-  right: 143px;
-  top: 57px;
+  right: 90px;
+  top: 30px;
+}
+header .topnav a.icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #626262;
+}
+header .topnav .logo {
+  display: block;
+  margin-top: 19px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 114px;
+  height: 45px;
+  align-items: center;
 }
 header .topnav a:hover {
   background-color: #ddd;
@@ -859,8 +867,7 @@ header .active {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0 80px;
-  width: 100%;
+  padding: 0 0 0 80px;
 }
 .wr-about .about-vertical {
   transform-origin: center center;
@@ -953,7 +960,7 @@ header .active {
   display: flex;
   flex-direction: row;
   position: relative;
-  padding: 66px 145px 12px;
+  padding: 66px 0 12px 145px;
   font-size: 14px;
   font-weight: 700;
   font-family: "Montserrat-Bold", sans-serif;
@@ -987,11 +994,12 @@ header .active {
 }
 .wr-services .service-portfolio .service-portfolio-block {
   display: grid;
-  grid-template-columns: 181px 86px 181px 199px 181px 86px 181px;
+  grid-template-columns: 181px 86px 181px 199px 181px 86px;
   grid-template-rows: 280px 40px 280px;
-  padding: 108px 122px;
+  padding: 108px 0 108px 121px;
 }
 .wr-services .service-portfolio .service-portfolio-block .img-box-1 {
+  background-image: url("../media/services-web-design.jpg");
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -999,12 +1007,14 @@ header .active {
   z-index: 5;
 }
 .wr-services .service-portfolio .service-portfolio-block .img-box-2 {
+  background-image: url("../media/services-ecommerce.jpg");
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 4;
 }
 .wr-services .service-portfolio .service-portfolio-block .img-box-3 {
+  background-image: url("../media/services-app-dev.jpg");
   grid-column-start: 4;
   grid-column-end: 7;
   grid-row-start: 1;
@@ -1013,8 +1023,9 @@ header .active {
   margin-left: 18px;
 }
 .wr-services .service-portfolio .service-portfolio-block .img-box-4 {
+  background-image: url("../media/services-seo.jpg");
   grid-column-start: 5;
-  grid-column-end: 8;
+  grid-column-end: 7;
   grid-row-start: 2;
   grid-row-end: 4;
 }
@@ -1065,7 +1076,7 @@ header .active {
 .wr-portfolio .portfolio .portfolio-grid {
   display: grid;
   margin-top: 37px;
-  grid-template-columns: repeat(3, 320px);
+  grid-template-columns: repeat(2, 320px);
   grid-template-rows: repeat(5, 148px);
   grid-gap: 14px;
 }
@@ -1271,6 +1282,14 @@ header .active {
   overflow: hidden;
   width: 50%;
   height: 634px;
+  background-position: center center;
+  background-size: cover;
+}
+.wr-chess .pic-1 {
+  background-image: url("../media/content-1.jpg");
+}
+.wr-chess .pic-2 {
+  background-image: url("../media/content-2.jpg");
 }
 .wr-chess .chess-text-box .text-box {
   width: 387px;
@@ -1541,6 +1560,17 @@ header .active {
   list-style: none;
   padding: 0 454px;
   margin-top: 43px;
+}
+
+@media all and (max-width: 1180px) {
+  .wr-services .service-portfolio .service-portfolio-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .wr-services .service-portfolio .service-portfolio-block .service-img-box {
+    margin: 10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

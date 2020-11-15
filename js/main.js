@@ -15,7 +15,7 @@ $('.testimonials-slider').slick({
     dots: true
 });
 
-function burger() {
+function myFunction() {
     let x = document.querySelector(".myLinks");
     if (x.style.display === "block") {
         x.style.display = "none";
