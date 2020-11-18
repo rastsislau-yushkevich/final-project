@@ -1,7 +1,21 @@
 $('.home-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true
+    arrows: true,
+    responsive: [{
+            breakpoint: 1140,
+            settings: {
+                arrows: false,
+            }
+        },
+        {
+            breakpoint: 1000,
+            settings: {
+                dots: false,
+            }
+        }
+    ],
+
 });
 $('.about-slider').slick({
     slidesToShow: 1,
