@@ -726,22 +726,6 @@ header .active {
   color: white;
 }
 
-.wr-home,
-.wr-about,
-.wr-services,
-.wr-portfolio,
-.wr-mission,
-.wr-qualities,
-.wr-testimonials,
-.wr-chess,
-.wr-app,
-.wr-events,
-.wr-team,
-.wr-newsletter,
-.wr-footer {
-  max-width: 1280px;
-}
-
 .wr-home {
   display: flex;
   flex-direction: column;
@@ -771,7 +755,7 @@ header .active {
   font-family: "Segoe-UI-Light", sans-serif;
   font-size: 37px;
   color: #626262;
-  width: 285px;
+  max-width: 285px;
   margin-top: 0;
 }
 .wr-home .home-slider .home-slider-box .slide-text-1 span {
@@ -857,7 +841,6 @@ header .active {
 }
 
 .container-custom {
-  display: block;
   background-color: #fff;
   position: relative;
   max-width: 986px;
@@ -884,7 +867,8 @@ header .active {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0 0 0 80px;
+  justify-content: center;
+  padding: 73px 67px 45px 80px;
   max-width: 100%;
 }
 .wr-about .about-vertical {
@@ -898,7 +882,6 @@ header .active {
   font-weight: 700;
 }
 .wr-about .container-custom {
-  margin: 73px 67px;
   padding-bottom: 74px;
   padding-left: 38px;
   display: flex;
@@ -938,11 +921,11 @@ header .active {
 }
 .wr-about .about-slider {
   position: relative;
-  width: 493px;
+  max-width: 493px;
   margin-top: -40px;
 }
 .wr-about .about-slider .about-slider-box {
-  height: 306px;
+  max-height: 306px;
   overflow: hidden;
 }
 .wr-about .about-slider .about-slider-box img {
@@ -978,8 +961,10 @@ header .active {
 .wr-services {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 66px 0 12px 145px;
+  padding: 66px 0 12px;
   font-size: 14px;
   font-weight: 700;
   font-family: "Montserrat-Bold", sans-serif;
@@ -988,7 +973,7 @@ header .active {
   transform-origin: center center;
   transform: rotate(270deg);
   position: absolute;
-  left: 70px;
+  left: 80px;
   top: 521px;
   font-size: 11px;
   font-family: "Montserrat-Bold", sans-serif;
@@ -1054,6 +1039,7 @@ header .active {
   position: relative;
   background-color: #e9edef;
   align-items: center;
+  justify-content: center;
 }
 .wr-portfolio .portfolio-vertical {
   transform-origin: center center;
@@ -1144,6 +1130,9 @@ header .active {
 }
 
 .wr-mission {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url("../media/our-mission-bg.jpg");
   padding: 0 147px 149px;
 }
@@ -1175,6 +1164,8 @@ header .active {
   display: flex;
   flex-direction: row;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 .wr-qualities .qualities-vertical {
   bottom: 32%;
@@ -1213,9 +1204,12 @@ header .active {
 }
 
 .wr-testimonials {
-  padding: 71px 147px 94px;
+  display: flex;
+  padding: 71px 0 94px;
   background-color: #e9edef;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 .wr-testimonials .testimonials-vertical {
   transform-origin: center center;
@@ -1243,17 +1237,17 @@ header .active {
 }
 .wr-testimonials .testimonials-slider {
   position: relative;
-  height: 306px;
-  width: 493px;
+  max-height: 306px;
+  max-width: 493px;
   margin-top: -38px;
 }
 .wr-testimonials .testimonials-slider .testimonials-slider-box {
   overflow: hidden;
-  height: 306px;
+  max-height: 306px;
+  max-width: 493px;
 }
 .wr-testimonials .testimonials-slider .testimonials-slider-box img {
   width: 100%;
-  height: 100%;
 }
 .wr-testimonials .testimonials-text {
   margin-top: -27px;
@@ -1298,7 +1292,7 @@ header .active {
   position: relative;
   overflow: hidden;
   width: 50%;
-  height: 634px;
+  max-height: 634px;
   background-position: center center;
   background-size: cover;
 }
@@ -1309,7 +1303,7 @@ header .active {
   background-image: url("../media/content-2.jpg");
 }
 .wr-chess .chess-text-box .text-box {
-  width: 387px;
+  max-width: 387px;
   padding: 119px 107px;
 }
 .wr-chess .chess-text-box .text-box h2 {
@@ -1326,7 +1320,10 @@ header .active {
   background-image: url("../media/app.jpg");
   background-size: cover;
   position: relative;
-  padding: 61px 147px;
+  padding: 61px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wr-app .app-vertical {
   transform-origin: center center;
@@ -1375,7 +1372,10 @@ header .active {
 
 .wr-events {
   background-image: url("../media/events-bg.jpg");
-  padding: 99px 293px;
+  padding: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wr-events .events-text {
   text-align: center;
@@ -1473,12 +1473,16 @@ header .active {
 }
 
 .wr-newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 43px 355px 62px;
+  padding: 60px 0;
   position: relative;
 }
 .wr-newsletter h2::before {
-  top: 102px;
+  top: 115px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -1545,7 +1549,8 @@ header .active {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 68px 212px 25px;
+  padding: 68px 0;
+  align-items: center;
 }
 .wr-footer footer .enquiries {
   width: 33%;
@@ -1559,8 +1564,10 @@ header .active {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 61px;
+  justify-content: center;
+  padding: 0 100px;
+  max-width: 229px;
+  align-items: center;
 }
 .wr-footer footer .social-icons svg {
   fill: #929292;
@@ -1609,6 +1616,10 @@ header .active {
   .wr-newsletter .wr-form form .btn-sub {
     margin-top: 20px;
   }
+
+  .wr-footer .social .social-icons {
+    padding: 0;
+  }
 }
 @media all and (max-width: 910px) {
   .wr-about .container-custom {
@@ -1641,6 +1652,46 @@ header .active {
   }
   .wr-chess .chess-box {
     width: 100%;
+  }
+}
+@media all and (max-width: 940px) {
+  .wr-events .events-text {
+    padding: 5px;
+  }
+}
+@media all and (max-width: 1230px) {
+  .wr-footer .lower-nav ul {
+    padding: 0;
+  }
+}
+@media all and (max-width: 768px) {
+  .wr-testimonials .testimonials-text span {
+    top: 285px;
+    right: 90px;
+  }
+}
+@media all and (max-width: 425px) {
+  .wr-home,
+.wr-about,
+.wr-services,
+.wr-portfolio,
+.wr-mission,
+.wr-mission,
+.wr-qualities,
+.wr-testimonials,
+.wr-chess,
+.wr-app,
+.wr-events,
+.wr-team,
+.wr-newsletter,
+.wr-form,
+.wr-footer,
+footer {
+    padding: 5px;
+  }
+
+  .wr-footer footer {
+    padding: 5px;
   }
 }
 
