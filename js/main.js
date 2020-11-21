@@ -3,7 +3,7 @@ $('.home-slider').slick({
     slidesToScroll: 1,
     arrows: true,
     responsive: [{
-        breakpoint: 1140,
+        breakpoint: 1168,
         settings: {
             arrows: false,
         }
