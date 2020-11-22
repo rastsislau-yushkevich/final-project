@@ -665,6 +665,11 @@ body h2::before {
   background-color: #000;
 }
 
+html {
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -677,7 +682,6 @@ header {
   /* Style navigation menu links */
   /* Style the hamburger menu */
   /* Add a grey background color on mouse-over */
-  /* Style the active link (or home/logo) */
 }
 header img {
   height: 45px;
@@ -688,6 +692,7 @@ header .topnav {
   background-color: #fff;
   position: relative;
   width: 100%;
+  padding: 0 40px;
 }
 header .topnav .myLinks {
   display: none;
@@ -704,8 +709,8 @@ header .topnav a.icon {
   background-color: #fff;
   display: block;
   position: absolute;
-  right: 90px;
-  top: 30px;
+  right: 20px;
+  top: 35px;
 }
 header .topnav a.icon svg {
   width: 20px;
@@ -725,10 +730,6 @@ header .topnav .logo {
 header .topnav a:hover {
   background-color: #ddd;
   color: black;
-}
-header .active {
-  background-color: #4CAF50;
-  color: white;
 }
 
 .wr-home {
@@ -1211,19 +1212,18 @@ header .active {
   padding: 32px 2px;
   position: relative;
 }
-.wr-qualities .qualities-row {
+.wr-qualities .qualities-main {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
-.wr-qualities .qualities-row .qualities-box {
+.wr-qualities .qualities-box {
   display: flex;
   flex-direction: row;
+  max-width: 450px;
 }
-.wr-qualities .qualities-row .qualities-box svg {
+.wr-qualities svg {
   width: 150px;
-  margin-right: 20px;
-}
-.wr-qualities .qualities-row .qualities-box p {
   margin-right: 20px;
 }
 .wr-qualities .qualities-column + .qualities-column {
@@ -1318,6 +1318,11 @@ header .active {
   width: 50%;
   overflow: hidden;
 }
+.wr-chess .chess-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .wr-chess .chess-row:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -1389,7 +1394,7 @@ header .active {
 
 .wr-events {
   background-image: url("../media/events-bg.jpg");
-  padding: 99px;
+  padding: 99px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1438,8 +1443,14 @@ header .active {
   font-size: 11px;
   font-family: "Montserrat-Bold", sans-serif;
   font-weight: 700;
-  left: 75px;
-  bottom: 49%;
+  left: -120px;
+  top: 50%;
+}
+.wr-team .team-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .wr-team h2 {
   margin-top: 81px;
@@ -1449,11 +1460,13 @@ header .active {
   transform: translate(-50%, 0);
 }
 .wr-team .team-content-main {
-  padding: 72px 170px 23px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  max-width: 986px;
+  position: relative;
+  margin-top: 20px;
 }
 .wr-team .team-content-main .team-member {
   margin-bottom: 45px;
@@ -1611,6 +1624,7 @@ header .active {
   margin: 43px auto;
   max-width: 1000px;
   align-items: center;
+  padding: 0;
 }
 
 @media all and (max-width: 1068px) {
@@ -1621,6 +1635,39 @@ header .active {
 @media all and (max-width: 1028px) {
   .container-custom {
     width: 100%;
+  }
+
+  .wr-about .about-text {
+    margin: 0 10px;
+  }
+
+  h2 {
+    margin: 0 10px;
+  }
+
+  .wr-testimonials .testimonials-text {
+    padding: 0 10px;
+  }
+  .wr-testimonials .testimonials-text h2 {
+    margin-left: 0;
+  }
+
+  .wr-chess .text-box {
+    padding: 0 10px;
+  }
+  .wr-chess .text-box h2 {
+    margin-left: 0;
+  }
+
+  .wr-mission .container-custom .mission-text {
+    padding: 0 10px;
+  }
+  .wr-mission .container-custom .mission-text h2 {
+    margin-left: 0;
+  }
+
+  .wr-qualities .qualities-main {
+    padding: 0 10px;
   }
 
   form {
@@ -1640,6 +1687,63 @@ header .active {
   .wr-about .container-custom p,
 .wr-testimonials .container-custom p {
     margin-bottom: 70px;
+  }
+}
+@media all and (max-width: 913px) {
+  .wr-services .service-portfolio .service-portfolio-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 555px;
+  }
+
+  .service-img-box {
+    margin: 5px;
+  }
+
+  .wr-services .service-portfolio .service-portfolio-block .img-box-3 {
+    margin-left: 5px;
+  }
+}
+@media all and (max-width: 701px) {
+  .wr-chess .chess-row {
+    flex-direction: column;
+  }
+  .wr-chess .chess-row .chess-box {
+    width: 100%;
+    height: 100%;
+  }
+  .wr-chess .chess-row .chess-text-box {
+    padding: 20px 0;
+  }
+  .wr-chess .chess-row .chess-text-box .text-box {
+    max-width: 100%;
+  }
+
+  .wr-chess .chess-row:nth-child(even) {
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 530px) {
+  .wr-about .container-custom {
+    padding-left: 0;
+  }
+
+  .wr-testimonials .container-custom {
+    padding-left: 0;
+  }
+}
+@media all and (max-width: 430px) {
+  .wr-home .home-slider .home-slider-box .slide-text-1 {
+    left: 10px;
+  }
+}
+@media all and (max-width: 600px) {
+  header .topnav {
+    justify-content: space-between;
+  }
+  header .topnav .logo {
+    margin: 19px 0;
   }
 }
 

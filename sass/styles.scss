@@ -24,6 +24,11 @@ body {
     }
 }
 
+html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -41,6 +46,7 @@ header {
         background-color: #fff;
         position: relative;
         width: 100%;
+        padding: 0 40px;
     }
     /* Hide the links inside the navigation menu (except for logo/home) */
     .topnav .myLinks {
@@ -60,8 +66,8 @@ header {
         background-color: #fff;
         display: block;
         position: absolute;
-        right: 90px;
-        top: 30px;
+        right: 20px;
+        top: 35px;
         svg {
             width: 20px;
             height: 20px;
@@ -82,11 +88,6 @@ header {
     .topnav a:hover {
         background-color: #ddd;
         color: black;
-    }
-    /* Style the active link (or home/logo) */
-    .active {
-        background-color: #4CAF50;
-        color: white;
     }
 }
 
@@ -631,20 +632,19 @@ header {
         padding: 32px 2px;
         position: relative;
     }
-    .qualities-row {
+    .qualities-main {
         display: flex;
         flex-direction: row;
-        .qualities-box {
-            display: flex;
-            flex-direction: row;
-            svg {
-                width: 150px;
-                margin-right: 20px;
-            }
-            p {
-                margin-right: 20px;
-            }
-        }
+        flex-wrap: wrap;
+    }
+    .qualities-box {
+        display: flex;
+        flex-direction: row;
+        max-width: 450px;
+    }
+    svg {
+        width: 150px;
+        margin-right: 20px;
     }
     .qualities-column+.qualities-column {
         margin-left: 180px;
@@ -739,6 +739,11 @@ header {
     .chess-box {
         width: 50%;
         overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     .chess-row:nth-child(even) {
         flex-direction: row-reverse;
@@ -812,7 +817,7 @@ header {
 
 .wr-events {
     background-image: url("../media/events-bg.jpg");
-    padding: 99px;
+    padding: 99px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -860,8 +865,14 @@ header {
         font-size: 11px;
         font-family: "Montserrat-Bold", sans-serif;
         font-weight: 700;
-        left: 75px;
-        bottom: 49%;
+        left: -120px;
+        top: 50%;
+    }
+    .team-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     h2 {
         margin-top: 81px;
@@ -871,11 +882,13 @@ header {
         transform: translate(-50%, 0);
     }
     .team-content-main {
-        padding: 72px 170px 23px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        max-width: 986px;
+        position: relative;
+        margin-top: 20px;
         .team-member {
             margin-bottom: 45px;
             h3 {
@@ -1036,6 +1049,7 @@ header {
             margin: 43px auto;
             max-width: 1000px;
             align-items: center;
+            padding: 0;
         }
     }
 }
@@ -1049,6 +1063,33 @@ header {
 @media all and (max-width: 1028px) {
     .container-custom {
         width: 100%;
+    }
+    .wr-about .about-text {
+        margin: 0 10px;
+    }
+    h2 {
+        margin: 0 10px;
+    }
+    .wr-testimonials .testimonials-text {
+        h2 {
+            margin-left: 0;
+        }
+        padding: 0 10px;
+    }
+    .wr-chess .text-box {
+        h2 {
+            margin-left: 0;
+        }
+        padding: 0 10px;
+    }
+    .wr-mission .container-custom .mission-text {
+        h2 {
+            margin-left: 0;
+        }
+        padding: 0 10px;
+    }
+    .wr-qualities .qualities-main {
+        padding: 0 10px;
     }
     form {
         display: flex;
@@ -1068,117 +1109,60 @@ header {
     }
 }
 
-// @media all and (max-width: 987px) {
-// }
-// @media all and (max-width:1180px) {
-//     .wr-services .service-portfolio .service-portfolio-block {
-//         display: flex;
-//         flex-direction: row;
-//         flex-wrap: wrap;
-//         .service-img-box {
-//             margin: 10px;
-//         }
-//     }
-// }
-// @media all and (max-width:1140px) {
-//     .wr-home .home-slider {
-//         max-width: 100%;
-//     }
-//     .wr-portfolio .portfolio .portfolio-grid {
-//         display: flex;
-//         flex-direction: row;
-//         flex-wrap: wrap;
-//         .portfolio-img-box {
-//             width: 320px;
-//             height: 200px;
-//         }
-//     }
-// }
-// @media all and (max-width:1127px) {
-//     .wr-newsletter .wr-form form .btn-sub {
-//         margin-top: 20px;
-//     }
-//     .wr-footer .social .social-icons {
-//         padding: 0;
-//     }
-// }
-// @media all and (max-width:910px) {
-//     .wr-about {
-//         .container-custom {
-//             flex-direction: column;
-//             .about-text {
-//                 margin-bottom: 10px;
-//             }
-//         }
-//     }
-//     .wr-qualities {
-//         .qualities-main {
-//             flex-direction: column;
-//         }
-//     }
-//     .wr-services .service-portfolio .service-portfolio-block {
-//         display: flex;
-//         flex-direction: column;
-//     }
-// }
-// @media all and (max-width:1000px) {
-//     .wr-testimonials {
-//         .container-custom {
-//             flex-direction: column;
-//         }
-//         .testimonials-text {
-//             margin-bottom: 30px;
-//         }
-//     }
-//     .wr-chess {
-//         display: flex;
-//         flex-direction: column;
-//         .chess-box {
-//             width: 100%;
-//         }
-//     }
-// }
-// @media all and (max-width: 940px) {
-//     .wr-events .events-text {
-//         padding: 5px;
-//     }
-// }
-// @media all and (max-width: 1230px) {
-//     .wr-footer .lower-nav ul {
-//         padding: 0;
-//     }
-// }
-// @media all and (max-width:768px) {
-//     .wr-testimonials .testimonials-text span {
-//         top: 285px;
-//         right: 90px;
-//     }
-// }
-// @media all and (max-width:550px) {
-//     .container-custom {
-//         width: 100%;
-//     }
-// }
-// @media all and (max-width: 425px) {
-//     .wr-home,
-//     .wr-about,
-//     .wr-services,
-//     .wr-portfolio,
-//     .wr-mission,
-//     .wr-mission,
-//     .wr-qualities,
-//     .wr-testimonials,
-//     .wr-chess,
-//     .wr-app,
-//     .wr-events,
-//     .wr-team,
-//     .wr-newsletter,
-//     .wr-form,
-//     .wr-footer,
-//     footer {
-//         padding: 5px;
-//     }
-//     .wr-footer footer {
-//         padding: 5px;
-//     }
-// }
+@media all and (max-width: 913px) {
+    .wr-services .service-portfolio .service-portfolio-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 555px;
+    }
+    .service-img-box {
+        margin: 5px;
+    }
+    .wr-services .service-portfolio .service-portfolio-block .img-box-3 {
+        margin-left: 5px;
+    }
+}
+
+@media all and (max-width: 701px) {
+    .wr-chess .chess-row {
+        flex-direction: column;
+        .chess-box {
+            width: 100%;
+            height: 100%;
+        }
+        .chess-text-box {
+            padding: 20px 0;
+            .text-box {
+                max-width: 100%;
+            }
+        }
+    }
+    .wr-chess .chess-row:nth-child(even) {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 530px) {
+    .wr-about .container-custom {
+        padding-left: 0;
+    }
+    .wr-testimonials .container-custom {
+        padding-left: 0;
+    }
+}
+
+@media all and (max-width: 430px) {
+    .wr-home .home-slider .home-slider-box .slide-text-1 {
+        left: 10px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    header .topnav {
+        justify-content: space-between;
+        .logo {
+            margin: 19px 0;
+        }
+    }
+}

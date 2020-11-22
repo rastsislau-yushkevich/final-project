@@ -8,7 +8,6 @@ $('.home-slider').slick({
             arrows: false,
         }
     }],
-
 });
 $('.about-slider').slick({
     slidesToShow: 1,
@@ -19,7 +18,6 @@ $('.testimonials-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    dots: true,
     responsive: [{
         breakpoint: 1000,
         settings: {
@@ -28,22 +26,35 @@ $('.testimonials-slider').slick({
     }]
 });
 
+// $('.service-portfolio-block').slick({
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     arrows: false,
+//     mobileFirst: true,
+//     responsive: [{
+//         breakpoint: 554,
+//         settings: { unslick }
+//     }]
+// });
+
+
+
 function myFunction() {
     let x = document.querySelector(".myLinks");
+    let y = document.querySelector("body");
+    let z = document.querySelector('.topnav');
     if (x.style.display === "block") {
         x.style.display = "none";
+        x.style.overflow = "auto";
+        y.style.overflow = "visible";
     } else {
         x.style.display = "block";
+        y.style.overflow = "hidden";
     }
 }
 
 
-$("#top").on("click", "a", function(event) {
-    event.preventDefault();
-    let id = $(this).attr('href'),
-        top = $(id).offset().top;
-    $('body,html').animate({ scrollTop: top }, 1500);
-});
+
 
 $("#home").on("click", "a", function(event) {
     event.preventDefault();
