@@ -29,8 +29,9 @@
                     <a href="#newsletter">Newsletter</a>
                     <a href="#footer">Contact Us</a>
                 </div>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                <a href="javascript:void(0);" class="burger-btn" onclick="myFunction()">
+                    <span class="menu-text">MENU</span>
+                    <span class="burger"></span>
                 </a>
             </div>
         </header>
@@ -53,7 +54,9 @@
                 <img src="./media/header-slide-2.jpg" alt="Your trusted lawfirm">
             </div>
         </div>
-        <p class="scroll-text">Scroll For More <span> ↓</span></p>
+        <div class="scroll-text">
+            <a href="#about-us">Scroll For More</a><span> ↓</span>
+        </div>
     </section>
     <section class="wr-about" id="about-us">
         <div class="container-custom">
@@ -64,7 +67,7 @@
                 <button>LEARN MORE</button>
                 <span>OUR STUDIO</span>
             </div>
-            <p class="about-vertical">ABOUT US</p>
+            <p class="about-vertical vertical">ABOUT US</p>
             <div class="about-slider">
                 <div class="about-slider-box">
                     <img src="./media/about-image.jpg" alt="Our Work">
@@ -79,22 +82,36 @@
         <div class="service-portfolio">
             <h2>OUR SERVICES</h2>
             <div class="service-portfolio-block">
-                <div class="service-img-box img-box-1">
-                    <img src="./media/services-web-design.jpg" alt="">
+                <div class="grid-box grid-box-1">
+                    <div class="service-img-box img-box-1">
+                        <img src="./media/services-web-design.jpg" alt="">
+                        <a href="#">Learn more</a>
+
+                    </div>
+                    <p>WEB & INTERACTIVE DESIGN</p>
                 </div>
-                <div class="service-img-box img-box-2">
-                    <img src="./media/services-ecommerce.jpg" alt="">
+                <div class="grid-box grid-box-2">
+                    <div class="service-img-box img-box-2">
+                        <img src="./media/services-ecommerce.jpg" alt="">
+                        <a href="#">Learn more</a>
+                    </div>
+                    <p>ECOMMERCE</p>
                 </div>
-                <div class="service-img-box img-box-3">
-                    <img src="./media/services-app-dev.jpg" alt="">
+                <div class="grid-box grid-box-3">
+                    <div class="service-img-box img-box-3">
+                        <img src="./media/services-app-dev.jpg" alt="">
+                        <a href="#">Learn more</a>
+                    </div>
+                    <p>APP DEVELOPMENT</p>
                 </div>
-                <div class="service-img-box img-box-4">
-                    <img src="./media/services-seo.jpg" alt="">
+                <div class="grid-box grid-box-4">
+                    <div class="service-img-box img-box-4">
+                        <img src="./media/services-seo.jpg" alt="">
+                        <a href="#">Learn more</a>
+                    </div>
+                    <p>SEO & MARKETING</p>
                 </div>
-                <div class="services-vertical">
-                    <p>WHAT WE OFFER</p>
-                </div>
-                <div class="services-vertical">
+                <div class="services-vertical vertical">
                     <p>WHAT WE OFFER</p>
                 </div>
             </div>
@@ -161,17 +178,18 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto similique sapiente cum sequi quam reprehenderit facere dolorum minima dolor consectetur nihil minus labore, doloremque, assumenda fugit unde, culpa dolore ullam.</p>
                 </div>
             </div>
-            <div class="qualities-vertical">
+            <div class="qualities-vertical vertical">
                 <p>WE DO OUR BEST</p>
             </div>
         </div>
     </section>
     <section class="wr-testimonials" id="testimonials">
         <div class="container-custom">
-            <p class="testimonials-vertical">WHAT CLIENTS SAY</p>
+            <p class="testimonials-vertical vertical">WHAT CLIENTS SAY</p>
             <div class="testimonials-text">
                 <h2>TESTIMONIALS</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt suscipit consequuntur doloremque provident eveniet earum commodi at veniam excepturi, dolorem unde facilis delectus id quisquam doloribus sit sint ad. Explicabo!</p>
+                <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt suscipit consequuntur doloremque provident eveniet earum commodi at veniam excepturi, dolorem unde facilis delectus id quisquam doloribus sit sint ad. Explicabo!</p>
+                <p class="author">Lulia Tracy, VivBlog</p>
                 <span>OUR STUDIO</span>
             </div>
             <div class="testimonials-slider">
@@ -196,7 +214,8 @@
             <div class="chess-box chess-text-box">
                 <div class="text-box">
                     <h2>CRAS TINCIDUNT ANTE EGET TURPIS DAPIBUS ELEIFEND</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos veritatis aliquid nemo delectus repudiandae non error nihil porro dolorem libero cum illo distinctio hic placeat sed, ducimus eum. Culpa, nesciunt.</p>
+                    <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos veritatis aliquid nemo delectus repudiandae non error nihil porro dolorem libero cum illo distinctio hic placeat sed, ducimus eum. Culpa, nesciunt.</p>
+                    <p class="chess-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum suscipit, doloremque, vel molestias tempora, veniam velit cumque facilis quae aperiam recusandae? Nam labore fugit, nobis eveniet libero voluptatem veritatis et.</p>
                 </div>
             </div>
         </div>
@@ -207,15 +226,16 @@
             <div class="chess-box chess-text-box">
                 <div class="text-box">
                     <h2>MORBI PELLENTESQUE ELEIFEND LECTUS QUIS CONGUE</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, architecto cupiditate, voluptatibus sequi nam nisi veritatis doloribus placeat quisquam, mollitia nulla. Iure consectetur necessitatibus perspiciatis mollitia minus
+                    <p class="main-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, architecto cupiditate, voluptatibus sequi nam nisi veritatis doloribus placeat quisquam, mollitia nulla. Iure consectetur necessitatibus perspiciatis mollitia minus
                         obcaecati labore natus?</p>
+                    <p class="chess-italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident repellat rem molestias cum necessitatibus, dolor amet fugiat dolorum optio esse quae cupiditate vel a placeat ex at beatae id quisquam.</p>
                 </div>
             </div>
         </div>
     </section>
     <section class="wr-app" id="app">
         <div class="container-custom">
-            <div class="app-vertical">
+            <div class="app-vertical vertical">
                 <p>GET IT NOW</p>
             </div>
             <div class="app-text">
@@ -238,7 +258,7 @@
         <div class="team-content">
             <h2>MEET OUR TEAM</h2>
             <div class="team-content-main">
-                <div class="team-vertical">
+                <div class="team-vertical vertical">
                     <p>JOB OPENINGS</p>
                 </div>
                 <!-- <div class="team-member-column"> -->
